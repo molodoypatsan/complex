@@ -1,0 +1,19 @@
+<svg width="433" height="408" viewBox="0 0 433 408" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="433" height="408" fill="url(#pattern0)"/>
+<path d="M387 82V142H313V149H266.5V132H246V33.5H337.5V17H404V82H387Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M313 148.5H267V200H366.5V205H386.5V141H313V148.5Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M313.192 252.662H267V200H366.916V204.602H387V268H313.192V252.662Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M313 253H267.5V309H294.5V376H339V393H404V328.5H387V268.5H313V253Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M218 394.5V264H247.5V273.5H267.5V310.5H294.5V375H259.5V394.5H218Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M216 394.5V264H186.5V273.5H166.5V310.5H139.5V375H174.5V394.5H216Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M120 252H165.5V309H138.5V376H94V393H29V328.5H46V273.5H120V252Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M119.5 273.5H46V198H167V250.822H119.5V273.5Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M124.729 116H46V198H167V145.178H124.729V116Z" fill="#3595F6" fill-opacity="0.75"/>
+<path d="M46.5 81V115.5H125V144.5H164V131H184.5V32.5H93V16H28V81H46.5Z" fill="#3595F6" fill-opacity="0.75"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.00230947 0.00245098)"/>
+</pattern>
+<image id="image0" width="433" height="408" xlink:href="img/floor.png"/>
+</defs>
+</svg>

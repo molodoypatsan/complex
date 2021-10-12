@@ -32,4 +32,33 @@ $(document).ready(function () {
             $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor"); // подсвечиваем текущий этаж
         }
     });
+    let popup = $('.popup');
+    let buttonPrimary = $('.button-primary');
+    let close = $('.close');
+    let popupContainer = $('popup-container');
+
+    buttonPrimary.on("click", function () {
+        popup.addClass('active');
+        currentCounter = $('.counter').text(); // получаем значение текущего этажа
+        $(".popup-block-left-title").text("Этаж " + currentCounter); // добавляем текст в заголовок попапа
+    });
+    floorPath.on("click", function () {
+        popup.addClass('active');
+    });
+    close.on("click", function () {
+        popup.removeClass('active');
+    });
+    // window.on("click", function () {
+    //     popup.removeClass('active');
+    // });
+    $(document).mouseup(function (e) {
+        var container = $(".popup");
+        if (container.has(e.target).length === 0){
+            container.removeClass('active');
+        }
+    });
+    floorPath.on("click", function() {
+        currentFloor = $(this).attr("data-floor"); // получаем значение текущего этажа
+        $(".popup-block-left-title").text("Этаж " + currentFloor); 
+    });
 });

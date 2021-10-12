@@ -254,11 +254,11 @@ path.current-floor {
   font-weight: normal;
 }
 
-.apartments-list {
+.room-list {
   margin-left: 45px;
 }
 
-.apartments-link {
+.room-link {
   font-size: 16px;
   line-height: 19px;
   color: #635854;
@@ -267,12 +267,12 @@ path.current-floor {
   display: inline-block;
 }
 
-.apartments-link:hover {
+.room-link:hover {
   color: #3596f5;
   text-decoration: underline;
 }
 
-.apartments-link.active {
+.room-link.active {
   color: #3596f5;
   text-decoration: underline;
 }
@@ -481,13 +481,13 @@ path.current-floor {
     align-items: center;
   }
 
-  .apartments-list {
+  .room-list {
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
   }
 
-  .apartments-link {
+  .room-link {
     margin-right: 10px;
   }
 

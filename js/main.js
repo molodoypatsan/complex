@@ -35,7 +35,6 @@ $(document).ready(function () {
     let popup = $('.popup');
     let buttonPrimary = $('.button-primary');
     let close = $('.close');
-    let popupContainer = $('popup-container');
 
     buttonPrimary.on("click", function () {
         popup.addClass('active');
@@ -48,9 +47,6 @@ $(document).ready(function () {
     close.on("click", function () {
         popup.removeClass('active');
     });
-    // window.on("click", function () {
-    //     popup.removeClass('active');
-    // });
     $(document).mouseup(function (e) {
         var container = $(".popup");
         if (container.has(e.target).length === 0){

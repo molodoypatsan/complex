@@ -11,32 +11,39 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
 }
+
 body {
   font-family: "Roboto", sans-serif;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
 }
+
 .header {
   background-color: #635854;
   border-bottom: 4px solid #3596f5;
   height: 64px;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar-menu {
   margin: 0;
   padding: 0;
@@ -44,6 +51,7 @@ body {
   display: flex;
   text-align: center;
 }
+
 .navbar-item {
   margin: 0 30px;
   width: 140px;
@@ -51,19 +59,24 @@ body {
   padding: 12px 0;
   transition: 0.4s;
 }
+
 .navbar-item.active {
   background-color: #3596f5;
 }
+
 .navbar-item:hover {
   background-color: #3596f5;
 }
+
 .navbar-link {
   text-decoration: none;
   color: #fff;
 }
+
 .navbar-contacts {
   text-align: right;
 }
+
 .navbar-text {
   display: block;
   color: #fff;
@@ -71,6 +84,7 @@ body {
   font-size: 14px;
   line-height: 16px;
 }
+
 .navbar-phone {
   font-weight: 700;
   font-size: 17px;
@@ -78,13 +92,16 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
 .main {
   padding-top: 54px;
   flex: 1 1 auto;
 }
+
 .main-row {
   display: flex;
 }
+
 .main-info {
   flex-grow: 1;
   text-align: center;
@@ -93,13 +110,16 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .home-image path {
   opacity: 0;
   cursor: pointer;
 }
+
 .home-image path:hover {
   opacity: 1;
 }
+
 path.current-floor {
   opacity: 1;
 }
@@ -109,14 +129,17 @@ path.current-floor {
   flex-direction: column;
   align-items: center;
 }
+
 .counter-button {
   background-color: #fff;
   border: none;
   cursor: pointer;
 }
+
 .counter-arrow-down {
   transform: rotateX(180deg);
 }
+
 .main-title {
   font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
@@ -125,12 +148,14 @@ path.current-floor {
   color: #635854;
   margin: 0;
 }
+
 .counter {
   font-family: "Bebas Neue", sans-serif;
   color: #635854;
   font-size: 124px;
   margin-top: 10px;
 }
+
 .button-primary {
   background-color: #3596f5;
   border-radius: 6px;
@@ -139,6 +164,7 @@ path.current-floor {
   padding: 16px 36px;
   cursor: pointer;
 }
+
 .popup {
   position: fixed;
   width: 100%;
@@ -149,10 +175,12 @@ path.current-floor {
   visibility: hidden;
   opacity: 0;
 }
+
 .popup.active {
   visibility: visible;
   opacity: 1;
 }
+
 .popup-block {
   position: absolute;
   display: flex;
@@ -163,6 +191,7 @@ path.current-floor {
   height: 565px;
   background-color: #fff;
 }
+
 .popup-block-left {
   width: 60%;
   background-color: #ebebeb;
@@ -171,6 +200,7 @@ path.current-floor {
   justify-content: center;
   align-items: center;
 }
+
 .popup-block-left-title {
   margin: 0;
   text-align: center;
@@ -180,18 +210,22 @@ path.current-floor {
   font-size: 24px;
   line-height: 29px;
 }
+
 .popup-block-left-image path {
   opacity: 0;
   cursor: pointer;
 }
+
 .popup-block-left-image path:hover {
   opacity: 1;
 }
+
 .close {
   position: absolute;
   right: 25px;
   top: 39px;
 }
+
 .popup-block-right-title {
   font-size: 24px;
   line-height: 29px;
@@ -200,10 +234,12 @@ path.current-floor {
   font-family: "Bebas Neue";
   font-weight: normal;
 }
+
 .apartments-list {
   list-style: none;
   margin-left: 5px;
 }
+
 .apartments-link {
   font-size: 16px;
   line-height: 19px;
@@ -212,14 +248,17 @@ path.current-floor {
   text-decoration: none;
   display: inline-block;
 }
+
 .apartments-link:hover {
   color: #3596f5;
   text-decoration: underline;
 }
+
 .apartments-link.active {
   color: #3596f5;
   text-decoration: underline;
 }
+
 .popup-block-right-text {
   font-size: 16px;
   line-height: 19px;
@@ -228,24 +267,29 @@ path.current-floor {
   margin-top: 56px;
   margin-left: 47px;
 }
+
 .footer {
   background-color: #d7d7d7;
   border-top: 4px solid #3596f5;
 }
+
 .footer-content {
   height: 171px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .left-content {
   display: flex;
   min-height: 171px;
   align-items: center;
 }
+
 .footer-logo {
   margin: 0 37px 0 0;
 }
+
 .footer-contact-text {
   display: block;
   color: #635854;
@@ -253,26 +297,31 @@ path.current-floor {
   line-height: 16px;
   margin: 0 0 4px 0;
 }
+
 .footer-contact-phone {
   font-size: 17px;
   line-height: 20px;
   color: #635854;
   font-weight: 700;
 }
+
 .social {
   display: flex;
   margin-top: 5px;
   list-style: none;
 }
+
 .social-link {
   color: #635854;
   font-size: 20px;
   padding: 0 16px 0 0;
 }
+
 .footer-menu {
   display: flex;
   list-style: none;
 }
+
 .footer-menu-link {
   color: #635854;
   padding: 0 20px 0 0;

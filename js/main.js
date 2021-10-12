@@ -38,23 +38,32 @@ $(document).ready(function () {
 
     buttonPrimary.on("click", function () {
         popup.addClass('active');
+        $('body').addClass('overflow');
         currentCounter = $('.counter').text(); // получаем значение текущего этажа
         $(".popup-block-left-title").text("Этаж " + currentCounter); // добавляем текст в заголовок попапа
     });
     floorPath.on("click", function () {
         popup.addClass('active');
+        $('body').addClass('overflow');
     });
     close.on("click", function () {
         popup.removeClass('active');
+        $('body').removeClass('overflow');
     });
     $(document).mouseup(function (e) {
-        var container = $(".popup");
-        if (container.has(e.target).length === 0){
-            container.removeClass('active');
+        if (popup.has(e.target).length === 0){
+            popup.removeClass('active');
+            $('body').removeClass('overflow');
         }
     });
     floorPath.on("click", function() {
         currentFloor = $(this).attr("data-floor"); // получаем значение текущего этажа
         $(".popup-block-left-title").text("Этаж " + currentFloor); 
+    });
+    let menuButton = $('.menu-button');
+    let menu = $('.navbar-menu');
+
+    menuButton.on('click', () => {
+        menu.toggleClass('active');
     });
 });

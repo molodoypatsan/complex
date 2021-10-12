@@ -113,6 +113,7 @@ ul {
 .main {
   padding-top: 100px;
   flex: 1 1 auto;
+  padding-bottom: 50px;
 }
 
 .main-row {

@@ -70,24 +70,23 @@ ul {
 }
 
 .navbar-item {
-  margin: 0 30px;
-  width: 140px;
-  height: 64px;
-  padding: 12px 0;
-  transition: 0.4s;
+  margin: 0 10px;
 }
 
-.navbar-item.active {
+.navbar-link.active {
   background-color: #3596f5;
 }
 
-.navbar-item:hover {
+.navbar-link:hover {
   background-color: #3596f5;
 }
 
 .navbar-link {
   text-decoration: none;
   color: #fff;
+  display: block;
+  padding: 12px 20px;
+  transition: 0.4s;
 }
 
 .navbar-contacts {
@@ -193,6 +192,7 @@ path.current-floor {
   background-color: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   opacity: 0;
+  overflow-y: auto;
 }
 
 .popup.active {
@@ -201,27 +201,22 @@ path.current-floor {
 }
 
 .popup-block {
-  position: absolute;
   display: flex;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 4rem auto;
   width: 1003px;
-  height: 565px;
   background-color: #fff;
+  position: relative;
 }
 
 .popup-block-left {
   width: 60%;
   background-color: #ebebeb;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .popup-block-left-title {
-  margin: 0;
   text-align: center;
   padding-bottom: 20px;
   font-family: "Bebas Neue";
@@ -230,32 +225,37 @@ path.current-floor {
   line-height: 29px;
 }
 
+.room-image {
+  width: 100%;
+  height: 100%;
+}
+
 .popup-block-left-image path {
   opacity: 0;
   cursor: pointer;
 }
 
-.popup-block-left-image path:hover {
+.popup-block-left-image path.active {
   opacity: 1;
 }
 
 .close {
   position: absolute;
   right: 25px;
-  top: 39px;
+  top: 15px;
+}
+
+.popup-block-right {
+  padding: 60px 45px;
 }
 
 .popup-block-right-title {
   font-size: 24px;
   line-height: 29px;
-  margin: 50px 0 55px 46px;
   text-transform: uppercase;
   font-family: "Bebas Neue";
   font-weight: normal;
-}
-
-.room-list {
-  margin-left: 45px;
+  margin-bottom: 50px;
 }
 
 .room-link {
@@ -265,11 +265,6 @@ path.current-floor {
   margin-bottom: 10px;
   text-decoration: none;
   display: inline-block;
-}
-
-.room-link:hover {
-  color: #3596f5;
-  text-decoration: underline;
 }
 
 .room-link.active {
@@ -283,7 +278,6 @@ path.current-floor {
   color: #635854;
   font-style: italic;
   margin-top: 56px;
-  margin-left: 47px;
 }
 
 .footer {
@@ -321,6 +315,7 @@ path.current-floor {
   line-height: 20px;
   color: #635854;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .social {
@@ -345,6 +340,7 @@ path.current-floor {
   font-size: 16px;
   line-height: 19px;
   text-decoration: underline;
+  white-space: nowrap;
 }
 
 @media (max-width: 1300px) {
@@ -410,11 +406,7 @@ path.current-floor {
   }
 }
 
-@media (max-width: 900px) {
-  .container {
-    max-width: 800px;
-  }
-
+@media (max-width: 980px) {
   .navbar {
     position: relative;
     height: 64px;
@@ -424,7 +416,7 @@ path.current-floor {
     padding: 10px;
     position: absolute;
     left: 50%;
-    top: 60px;
+    top: 64px;
     background-color: #635854;
     display: block;
     visibility: hidden;
@@ -441,6 +433,12 @@ path.current-floor {
     visibility: visible;
     opacity: 1;
     transform: translate(-55%, 0%);
+  }  
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 800px;
   }
 }
 
@@ -454,14 +452,8 @@ path.current-floor {
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    max-width: 690px;
-  }
-
-  .home-image {
-    height: 100%;
-  }
+@media (max-width: 830px) {
+  
 
   .popup-block {
     flex-direction: column;
@@ -470,21 +462,18 @@ path.current-floor {
 
   .popup-block-left {
     width: 100%;
-  }
-
-  .popup-block-left-title {
     padding-top: 20px;
   }
 
   .popup-block-right {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding: 20px 40px;
   }
 
   .room-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
   }
 
   .room-link {
@@ -492,12 +481,21 @@ path.current-floor {
   }
 
   .popup-block-right-title {
-    margin: 10px 0 20px 20px;
+    margin-bottom: 20px;
   }
 
   .popup-block-right-text {
-    margin-right: 50px;
-    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 690px;
+  }
+
+  .home-image {
+    height: 100%;
   }
 
   .footer-content {
@@ -517,31 +515,8 @@ path.current-floor {
 }
 
 @media (max-width: 660px) {
-  .popup {
-    overflow-y: auto;
-  }
-
   .popup-block {
-    overflow-x: auto;
-    max-width: 100%;
-  }
-
-  .popup-block-left {
-    padding-top: 230px;
-  }
-
-  .popup-block-right {
-    display: block;
-  }
-
-  .close {
-    right: 15px;
-    top: 260px;
-  }
-
-  .popup-block-right-text {
-    padding-bottom: 30px;
-    margin-left: 20px;
+    width: 100%;
   }
 }
 
@@ -552,17 +527,8 @@ path.current-floor {
 }
 
 @media (max-width: 410px) {
-  .popup-block-left {
-    padding-top: 290px;
-    overflow-x: auto;
-  }
-
-  .popup-block-left-image {
-    margin-left: 75px;
-  }
-
-  .close {
-    top: 310px;
+  .popup-block-right {
+    padding: 20px;
   }
 }
 

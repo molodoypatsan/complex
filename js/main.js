@@ -67,3 +67,40 @@ $(document).ready(function () {
         menu.toggleClass('active');
     });
 });
+
+const room = document.querySelectorAll('[data-room]');
+const roomLink = document.querySelectorAll('[data-room-link]');
+
+for (let rooms of room) {
+    rooms.addEventListener('mouseover', () => {
+        rooms.classList.add('active');
+        roomLink.forEach(content => {
+            if (content.dataset.roomLink === rooms.dataset.room) {
+                content.classList.add('active');
+            }
+        });
+    });
+    rooms.addEventListener('mouseout', () => {
+        room.forEach(item => { item.classList.remove('active') });
+        roomLink.forEach(content => {
+            content.classList.remove('active');
+        });
+    });
+};
+
+for (let roomsLink of roomLink) {
+    roomsLink.addEventListener('mouseover', () => {
+        roomsLink.classList.add('active');
+        room.forEach(content => {
+            if (content.dataset.room === roomsLink.dataset.roomLink) {
+                content.classList.add('active');
+            }
+        });
+    });
+    roomsLink.addEventListener('mouseout', () => {
+        room.forEach(item => { item.classList.remove('active') });
+        roomLink.forEach(content => {
+            content.classList.remove('active');
+        });
+    });
+};

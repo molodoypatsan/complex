@@ -104,3 +104,55 @@ for (let roomsLink of roomLink) {
         });
     });
 };
+$(document).ready(function() {
+    $('.search-select').select2({
+        minimumResultsForSearch: Infinity
+    });
+});
+
+var searchRangeFloor = document.getElementById('search-range-floor');
+
+noUiSlider.create(searchRangeFloor, {
+    start: [0, 25],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 25
+    },
+    step: 1,
+    format: formatForSlider,
+    tooltips: {
+        // tooltips are output only, so only a "to" is needed
+        to: function(numericValue) {
+            return numericValue.toFixed(0);
+        }
+    }
+});        
+
+
+var searchRangeArea = document.getElementById('search-range-area');
+
+noUiSlider.create(searchRangeArea, {
+    start: [0, 150],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 150
+    },
+    format: formatForSlider,
+    tooltips: {
+        // tooltips are output only, so only a "to" is needed
+        to: function(numericValue) {
+            return numericValue.toFixed(1);
+        }
+    }
+});        
+
+var formatForSlider = {
+    from: function (formattedValue) {
+        return Number(formattedValue);
+    },
+    to: function(numericValue) {
+        return Math.round(numericValue);
+    }
+};

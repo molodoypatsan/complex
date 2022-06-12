@@ -113,11 +113,11 @@ $(document).ready(function() {
 var searchRangeFloor = document.getElementById('search-range-floor');
 
 noUiSlider.create(searchRangeFloor, {
-    start: [0, 25],
+    start: [0, 18],
     connect: true,
     range: {
         'min': 0,
-        'max': 25
+        'max': 18
     },
     step: 1,
     format: formatForSlider,

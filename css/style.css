@@ -43,6 +43,27 @@ ul {
   overflow: hidden;
 }
 
+.logo {
+  font-size: 21px;
+  line-height: 24px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-right: 30px;
+  flex: 0;
+}
+
+.header .logo {
+  color: #fff;
+}
+
+.footer .logo {
+  color: #111;
+}
+
+.logo:hover {
+  text-decoration: underline;
+}
+
 .menu-button {
   display: none;
 }
